@@ -9,13 +9,13 @@
 #' @examples add_monthly_covariates(FARC_results, monthly_viol)
 
 add_monthly_covariates <- function(target_df, monthly_data) {
-  dates <- df["date"]
+  dates <- target_df["date"]
 
   covariate_names <- colnames(monthly_data)[1:(length(monthly_data) - 1)] # exclude the last column, date
-  num_of_covars <- length(covariate_column_names)
+  num_of_covars <- length(covariate_names)
 
-  # add these columns to the dataframe with NA
-  df[, covariate_names] <- NA
+  # add these columns to the dataframe with initial value of NA
+  target_df[ , covariate_names] <- NA
 
   # populate these columns: for each observation in the target df, construct a "1st of the month" date to get the monthly covariate data
   for (i in 1:length(dates[[1]])) {
@@ -30,10 +30,10 @@ add_monthly_covariates <- function(target_df, monthly_data) {
 
     # populate the observation dataset
     for (j in 1:num_of_covars) {
-      df[as.character(covariate_names[j])][i, 1] <- as.numeric(covar_data[j])
+      target_df[as.character(covariate_names[j])][i, 1] <- as.numeric(covar_data[j])
     }
 
   }
 
-  return(df)
+  return(target_df)
 }
