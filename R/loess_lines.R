@@ -15,7 +15,7 @@ loess_lines <- function(liwc_results) {
     sapply(
       liwc_results[, 1:(length(liwc_results - 1))],
       function(x) {
-        loess(x ~ as.numeric(liwc_results$date), control = loess.control(surface = "direct"))
+        stats::loess(x ~ as.numeric(liwc_results$date), control = stats::loess.control(surface = "direct"))
         }
       )
     )

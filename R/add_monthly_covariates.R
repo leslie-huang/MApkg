@@ -26,7 +26,7 @@ add_monthly_covariates <- function(target_df, monthly_data) {
     monthly_date <- as.Date(paste(year, month, "01", sep = "-")) # monthly data is in the format of "1st of the month"
 
     # get the observation in question from the covariate dataset
-    covar_data <- filter(monthly_data, date == monthly_date)
+    covar_data <- dplyr::filter(monthly_data, date == monthly_date)
 
     # populate the observation dataset
     for (j in 1:num_of_covars) {
