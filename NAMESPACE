@@ -3,5 +3,7 @@
 export(add_monthly_covariates)
 export(extract_liwc_values)
 export(generate_binary_states)
+export(generate_lead_state)
+export(generate_states)
 export(loess_lines)
 export(loess_liwc_estimates)

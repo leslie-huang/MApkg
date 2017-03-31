@@ -3,7 +3,7 @@
 #'
 #' @param df Dataframe containing sentiment levels
 #' @param date Name of var that contains date var for sorting
-#' @param side Name of var in df that contains side
+#' @param side_var Name of var in df that contains side
 #' @param side1 Name to assign side 1
 #' @param side2 Name to assign side 2
 #' @param state_var Name to assign the state variable
@@ -11,7 +11,7 @@
 #'
 #' @keywords coarsen, sentiment
 #' @export
-#' @examples generate_states(mnl_df, date side, FARC, govt, state_t, sentiment_level)
+#' @examples generate_states(mnl_df, date, side, FARC, govt, state_t, sentiment_level)
 
 
 generate_states <- function(df, date, side_var, side1, side2, state_var, sentiment_var) {
