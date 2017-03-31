@@ -19,7 +19,7 @@ generate_lead_state(df, date, existing_state, lead_state)
 Function to create a new lead variable from an existing variable
 }
 \examples{
-generate_lead_state(df, "state_t", "state_t_lead")
+generate_lead_state(df, "date", "state_t", "state_t_lead")
 }
 \keyword{data}
 \keyword{lag,}
