@@ -25,7 +25,7 @@ generate_states(df, date, side_var, side1, side2, state_var, sentiment_var)
 Function to coarsen sentiment data into binary states
 }
 \examples{
-generate_states(mnl_df, date, side, FARC, govt, state_t, sentiment_level)
+generate_states(mnl_df, "date", "side", "FARC", "govt", "state_t", "sentiment_level")
 }
 \keyword{coarsen,}
 \keyword{sentiment}
