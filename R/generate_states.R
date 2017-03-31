@@ -18,7 +18,7 @@ generate_states <- function(df, date, side_var, side1, side2, state_var, sentime
 
   # first sort the data by date -- OK if it's not regular time series!
 
-  df <- df[order(as.Date(df[date], format = "%Y-%m-%d")), ]
+  df <- df[order(as.Date(df$date, format = "%Y-%m-%d")), ]
 
   df[state_var] <- NA
 

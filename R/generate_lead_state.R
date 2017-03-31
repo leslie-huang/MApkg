@@ -11,7 +11,7 @@
 #' @examples generate_lead_state(df, "date", "state_t", "state_t_lead")
 
 generate_lead_state <- function(df, date, existing_state, lead_state) {
-  df <- df[order(as.Date(df[date], format = "%Y-%m-%d")), ]
+  df <- df[order(as.Date(df$date, format = "%Y-%m-%d")), ]
 
   df[lead_state] <- NA
 
