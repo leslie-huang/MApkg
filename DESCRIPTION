@@ -13,5 +13,6 @@ Imports: LIWCalike,
     quanteda,
     dplyr,
     ggplot2,
-    stats
+    stats,
+    reshape2
 RoxygenNote: 6.0.1

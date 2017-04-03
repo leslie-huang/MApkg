@@ -4,7 +4,8 @@
 \alias{generate_base_graph}
 \title{Function to generate a base graph of sentiment}
 \usage{
-generate_base_graph(y_var, y_legend, title)
+generate_base_graph(y_var, y_legend, title, FARC_results, joint_results,
+  govt_results)
 }
 \arguments{
 \item{y_var}{Name of the y variable to be plotted (must match column name in the dataframes)}
@@ -12,9 +13,18 @@ generate_base_graph(y_var, y_legend, title)
 \item{y_legend}{Name for the y variable to appear in the legend}
 
 \item{title}{Title for the graph}
+
+\item{FARC_results}{df of FARC LIWC results}
+
+\item{joint_results}{df of joint LIWC results}
+
+\item{govt_results}{df of govt LIWC results}
 }
 \description{
 This function generates a time series graph of 1 type of sentiment x the 3 actors. Includes scatterplot of observed values as well as loess curves.
+}
+\examples{
+generate_base_graph("EmoNeg", "Negative Emotion", "Graph of Negative Emotion", FARC_results, joint_results, govt_results)
 }
 \keyword{ggplot,}
 \keyword{graph}

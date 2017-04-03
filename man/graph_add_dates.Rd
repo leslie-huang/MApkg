@@ -7,13 +7,15 @@
 graph_add_dates(base_graph, title, data, group_label, legend_label)
 }
 \arguments{
+\item{base_graph}{Ggplot graph to which datelines will be added}
+
 \item{title}{Title for the graph}
 
 \item{data}{Dataframe of dates with categorical labels}
 
-\item{legend_label}{Name of group for the graph legend}
+\item{group_label}{Group i.e. categorical variable value to graph}
 
-\item{group}{Group i.e. categorical variable value to graph}
+\item{legend_label}{Name of group for the graph legend}
 }
 \description{
 This function adds major agreements to a base graph

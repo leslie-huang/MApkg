@@ -2,18 +2,21 @@
 % Please edit documentation in R/liwc_summary_stats.R
 \name{liwc_summary_stats}
 \alias{liwc_summary_stats}
-\title{Function to generate summary statistics from a LIWC matrix}
+\title{Function to generate summary statistics for a LIWC matrix}
 \usage{
-liwc_summary_stats(df)
+liwc_summary_stats(df, dict)
 }
 \arguments{
 \item{df}{Dataframe of texts}
+
+\item{dict}{LIWC dictionary}
 }
 \description{
-Function to generate summary statistics from a LIWC matrix
+Function to generate summary statistics for a LIWC matrix
 }
 \examples{
-liwc_summary_stats(FARC)
+liwc_summary_stats(FARC, spanish_dict)
 }
-\keyword{statistics}
+\keyword{LIWC}
+\keyword{statistics,}
 \keyword{summary}
