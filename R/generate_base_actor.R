@@ -21,10 +21,10 @@ generate_base_actor <- function(data, title) {
                  limits = c(as.Date("2012-06-01", "%Y-%m-%d"), NA)) +
     scale_colour_manual(name = "Sentiment",
                         labels = c("Neg. emotion", "Pos. emotion"),
-                        values = c("grey30", "black")) +
+                        values = c("grey20", "grey50", "grey70", "black")) +
     scale_linetype_manual(name = "Sentiment",
                           labels = c("Neg. emotion", "Pos. emotion"),
-                          values = c(1,2)) +
+                          values = c(1,2,3,4,5)) +
     ggtitle(title) +
     theme_bw()
 
