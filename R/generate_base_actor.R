@@ -14,7 +14,7 @@ generate_base_actor <- function(data, title, sentiment_measure) {
   data$id <- rep(1:length(data[,1]))
   melted_data <- reshape2::melt(data, id = c("date", "id"), variable.name = "sentiment_type", value.name = sentiment_measure)
 
-  graph <- ggplot2::ggplot(data = melted_data, ggplot2::aes(y = get(sentiment_measure), x = as.Date(date, origin = "1970-01-01"), group = sentiment_type)) +
+  graph <- ggplot2::ggplot(data = melted_data, ggplot2::aes(y = sentiment_measure, x = as.Date(date, origin = "1970-01-01"), group = sentiment_type)) +
     ggplot2::geom_smooth(method = "loess", se = FALSE, ggplot2::aes(linetype = sentiment_type, color = sentiment_type)) +
     ggplot2::labs(
       x = "Date",
