@@ -25,4 +25,9 @@ generate_graph_predicted <- function(data, title, y_var) {
                           values = c(1, 2, 3, 4)) +
     ggplot2::ggtitle(title) +
     ggplot2::theme_bw()
+  
+  filename = paste(title, ".eps", collapse = "")
+  ggsave(file = filename)
+  
+  
 }

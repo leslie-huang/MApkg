@@ -27,4 +27,7 @@ generate_base_graph <- function(y_var, y_legend, title, FARC_results, joint_resu
     ggplot2::scale_x_date(date_minor_breaks = "1 month",
                  limits = c(as.Date("2012-06-01", "%Y-%m-%d"), NA)) +
     ggplot2::ggtitle(title)
+  
+  filename = paste(title, ".eps", collapse = "")
+  ggsave(file = filename)
 }
