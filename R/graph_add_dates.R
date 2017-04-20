@@ -19,5 +19,8 @@ graph_add_dates <- function(base_graph, title, data, group_label, legend_label){
     ggplot2::ggtitle(title) +
     ggplot2::geom_vline(data = filtered_data, mapping = ggplot2::aes(xintercept = as.numeric(date), color = group), linetype = 2)
 
+  filename = paste(title, ".eps", collapse = "")
+  ggsave(file = filename, width = 8, height = 5, units = "in")
+
   return(graph)
 }

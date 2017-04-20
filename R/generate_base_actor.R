@@ -30,5 +30,11 @@ generate_base_actor <- function(data, title, sentiment_measure) {
     ggplot2::ggtitle(title) +
     ggplot2::theme_bw()
 
+
+  filename = paste(title, ".eps", collapse = "")
+  ggsave(file = filename, width = 8, height = 5, units = "in")
+
+
+
   return(graph)
 }
