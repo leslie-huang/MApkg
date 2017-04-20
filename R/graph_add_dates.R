@@ -15,7 +15,7 @@ graph_add_dates <- function(base_graph, title, data, group_label, legend_label){
   filtered_data <- data[data["group"] == group_label, ]
   filtered_data["group"] <- legend_label
 
-  graph <- base_graph + ggplot2::ggtitle(title) +
+  graph = base_graph + ggplot2::ggtitle(title) +
     ggplot2::geom_vline(data = filtered_data, mapping = ggplot2::aes(xintercept = as.numeric(date), color = group), linetype = 2)
 
   return(graph)
