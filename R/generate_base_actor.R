@@ -16,7 +16,7 @@ generate_base_actor <- function(data, title, sentiment_measure) {
 
   graph <- ggplot2::ggplot(data = melted_data, ggplot2::aes(y = sentiment_measure, x = as.Date(date, origin = "1970-01-01"), group = sentiment_type)) +
     ggplot2::geom_smooth(method = "loess", se = FALSE, ggplot2::aes(linetype = sentiment_type, color = sentiment_type)) +
-    ggplot2::geom_jitter(ggplot2::aes(shape = sentiment_type, color = sentiment_type)) +
+    ggplot2::geom_jitter(ggplot2::aes(color = sentiment_type), shape = sentiment_type) +
     ggplot2::labs(
       x = "Date",
       y = "Loessed % of Document") +
