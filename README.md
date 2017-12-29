@@ -9,4 +9,4 @@ To install:
 
 Install and load the `devtools` R package.
 
-Run `devtools::install_github("leslie-huang/MApkg")`
+Run `devtools::install_github("leslie-huang/faRc-sentiment-analysis-library")`
