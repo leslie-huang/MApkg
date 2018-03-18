@@ -1,4 +1,4 @@
-# MApkg
+# faRc-sentiment-analysis
 My first R package: custom functions for my MA thesis analysis
 
 I am in the process of refactoring the sentiment analysis I performed as part of my MA thesis analysis (https://github.com/leslie-huang/MA-thesis-analysis).
