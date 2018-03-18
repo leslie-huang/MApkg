@@ -1,4 +1,4 @@
-Package: faRc-sentiment-analysis
+Package: faRc-sentiment-analysis-library
 Title: Helper Functions for Sentiment Analysis of FARC negotiations
 Version: 0.0.0.9000
 Authors@R: person("Leslie", "Huang", role = c("aut", "cre"),
