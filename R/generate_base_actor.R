@@ -22,11 +22,11 @@ generate_base_actor <- function(data, title, sentiment_measure) {
       y = "Loessed % of Document") +
     ggplot2::scale_x_date(date_minor_breaks = "1 month",
                  limits = c(as.Date("2012-06-01", "%Y-%m-%d"), NA)) +
-    ggplot2::scale_colour_manual(name = "Sentiment",
-                        labels = c("Neg. emotion", "Pos. emotion")
-                        #,
-                        #values = c("grey20", "grey50", "grey70", "black")
-                        ) +
+    # ggplot2::scale_colour_manual(name = "Sentiment",
+    #                     labels = c("Neg. emotion", "Pos. emotion")
+    #                     ,
+    #                     values = c("grey20", "grey50", "grey70", "black")
+    #                     ) +
     ggplot2::scale_linetype_manual(name = "Sentiment",
                           labels = c("Neg. emotion", "Pos. emotion"),
                           values = c(1,2,3,4,5)) +
